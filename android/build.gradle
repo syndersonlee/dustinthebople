@@ -43,8 +43,8 @@ task wrapper(type: Wrapper) {
 }
 
 subprojects { subproject ->
-    afterEvaluate {
-        if ((subproject.plugins.hasPlugin('android') || subproject.plugins.hasPlugin('android-library'))) {
+    afterEvaluate {        if ((subproject.plugins.hasPlugin('android') || subproject.plugins.hasPlugin('android-library'))) {
+
             android {
                 variantFilter { variant ->
                     def names = variant.flavors*.name
